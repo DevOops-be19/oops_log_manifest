@@ -1,0 +1,19 @@
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: oopsfrontdep 
+spec: 
+  selector:
+    matchLabels:
+      app: oopsfrontkube 
+  template: 
+    metadata:
+      labels:
+        app: oopsfrontkube 
+    spec:
+      containers:
+      - name: vue-container 
+        image: kjandgo/oops_log_front:latest # 태깅해야 나중에 k8s에 용이함!
+        imagePullPolicy: Always 
+        ports:
+        - containerPort: 80 

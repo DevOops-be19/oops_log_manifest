@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oopsbackdep
+spec:
+  selector:
+    matchLabels:
+      app: oopsbackkube
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: oopsbackkube
+    spec:
+      containers:
+      - name: boot-container
+        image: kjandgo/oops_log_back:latest # 태깅해야 나중에 k8s에 용이함!
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
