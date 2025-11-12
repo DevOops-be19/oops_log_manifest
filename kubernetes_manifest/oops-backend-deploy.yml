@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: boot-container
-        image: kjandgo/oops_log_back:latest # 태깅해야 나중에 k8s에 용이함!
+        image: kjandgo/oops_log_back:1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
