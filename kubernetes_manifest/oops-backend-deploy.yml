@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: boot-container
-        image: kjandgo/oops_log_back:25
+        image: kjandgo/oops_log_back:26
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
